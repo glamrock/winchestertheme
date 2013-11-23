@@ -1,2 +1,2 @@
-winchestertheme
+Winchester
 ===============
