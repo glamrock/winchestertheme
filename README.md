@@ -1,6 +1,6 @@
 #Winchester
 
-Winchester is a refined, tasteful, theme for the [Ghost](http://github.com/tryghost/ghost/) blogging platform. It derives its inspiration from classical print typography&mdash;it's meant to evoke a beautifully typeset book. The goal is to create a straightforward, fast experience with an air of sophistication for your readers.
+Winchester is a refined, tasteful, theme for the [Ghost](http://github.com/tryghost/ghost/) blogging platform. It derives its inspiration from classical print typography&mdash;it's meant to evoke a nicely typeset book. The goal is to create a straightforward, fast experience with an air of sophistication for your readers.
 
 As Ghost evolves, so too will Winchester.
 
