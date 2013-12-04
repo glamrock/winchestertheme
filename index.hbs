@@ -1,0 +1,39 @@
+{{!< default}}
+
+<a name="contents"></a><h3>Contents</h3>
+
+<main class="main_winchester" role="main">
+	
+	{{#foreach posts}}
+	
+		<article class="article_winchester" role="article" itemscope itemtype="http://schema.org/Article">
+			
+			<header class="postheader_winchester">
+				
+				<div class="meta_winchester">
+
+					<time class="date_winchester" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
+						{{date format='MMMM D, YYYY'}}
+					</time>
+
+				</div>
+				
+				<h4 class="posttitle_winchester" itemprop="headline"><a href="{{{url}}}" rel="bookmark">{{title}}</a></h4>
+			
+			</header>
+		
+		</article>
+	
+	{{/foreach}}
+
+	{{#if pagination}}
+
+		<div class="pagination_winchester">
+
+			{{{pagination}}}
+
+		</div>
+
+	{{/if}}
+
+</main>

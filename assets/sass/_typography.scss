@@ -1,0 +1,136 @@
+// --------------------------------------------------
+// Typography variables & styles for the Winchester theme
+// 1. Golden ratio
+// 2. General
+// 3. Weights
+// 4. Styles
+// 5. Scale
+// 6. Indentation
+// --------------------------------------------------
+
+// 1. Golden ratio
+$golden: 1.618;
+
+// 2. General
+$font-style-italic: italic;
+$font-smoothing: antialiased;
+
+// 3. Weights
+$font-weight-bold: 700;
+$font-weight-semibold: 600;
+$font-weight-medium: 400;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+$font-weight-thin: 300;
+
+$heading-font-weight: $font-weight-thin;
+$body-font-weight: $font-weight-regular;
+$link-font-weight: $font-weight-regular;
+
+$base-font-size: 1.2em;
+
+// 4. Styles
+body {
+  font-family: $body-font;
+  font-weight: $font-weight-regular;
+  font-size: $base-font-size;
+  line-height: $golden + 0em;
+  color: $body-color;
+}
+a {
+    background: transparent;
+}
+a:link, a:visited {
+	color: $link-color;
+	text-decoration: none;
+	transition: color .2s ease-out;
+}
+a:focus {
+    outline: thin dotted;
+}
+a:active,
+a:hover {
+  outline: 0;
+	color: darken($link-color, 25%);
+}
+
+h1 {
+	font-family: $heading-font;
+	font-weight: $font-weight-light;
+}
+
+h2,h3,h4,h5,h6 {
+	font-family: $heading-font;
+	font-weight: $heading-font-weight;
+}
+
+// 5. Scale
+h1,h2,h3,h4,h5,h6 {
+  line-height: 1.3em;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 0.563em 0;
+  
+	@media (max-width:$phone) {
+    	font-size: 2em;
+    }
+}
+
+h2 {
+  font-size: 2.25em;
+  margin: 0.625em 0;
+  
+  @media (max-width:$phone) {
+    	font-size: 1.75em;
+    }
+  
+}
+
+h3 {
+  font-size: 1.5em;
+  margin: 1.313em 0;
+  
+  @media (max-width:$phone) {
+    	font-size: 1.5em;
+    }
+}
+
+h4 {
+  font-size: 1.313em;
+  margin: 1.313em 0;
+  
+  @media (max-width:$phone) {
+    	font-size: 1.25em;
+    }
+}
+
+h5 {
+  font-size: 1.125em;
+  margin: 1.313em 0;
+  
+}
+
+h6 {
+  font-size: 1em;
+  margin: 0.75em 0;
+}
+
+// 6. Indentation
+.post-template {
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+	text-align: justify;
+  }
+
+  p:first-of-type:first-line {
+    font-family: $secondary-font;
+  }
+
+  p + p {
+    text-indent: 1.5em;
+  }
+
+}

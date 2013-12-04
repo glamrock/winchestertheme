@@ -1,0 +1,421 @@
+// --------------------------------------------------
+// Design and layout for the Winchester theme
+// 1. Body
+// 2. Elements & Embeds
+// 3. Header
+// 4. Content
+// 5. Footer
+// 6. Print Styles
+// --------------------------------------------------
+
+// 1. Body
+body {
+    width: 85%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+// 2. Elements & Embeds
+blockquote {
+	font-style: $font-style-italic;
+
+	cite {
+		font-style: normal;
+		font-family: $secondary-font;
+		font-size: 0.9em;
+		letter-spacing: 1px;
+		display: block;
+	}
+}
+
+hr {
+    border: 0;
+    color: $body-color;
+    background: $body-color;
+    height:1px;
+}
+
+hr.separator {
+	border: 0;
+	height: 1px;
+	width: 125px;
+	margin: 0 auto;
+	color: $body-color;
+    background: $body-color;
+}
+
+button, input, select, textarea, table {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+img, embed, object, video, iframe {
+	border: 0;
+	max-width: 100%;
+	height: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+img {
+	width: auto;
+}
+
+.fluid-width-video-wrapper {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	
+	iframe {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
+// 3. Header
+.header_winchester {
+	text-align: center;
+	margin-top: 3em;
+
+	a:link, a:visited {
+		color: $heading-color;
+		border: none;
+	}
+
+	img {
+		max-height: 100px;
+		margin: 0;
+		
+		@media (max-width:$phone) {
+    		max-height: 50px;
+    	}
+	}
+
+	h1 {
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		margin-top: .5em;
+		margin-bottom: .5em;
+		
+		@media (max-width:$phone) {
+    		font-size: 2em;
+			letter-spacing: 1px;
+    	}
+		
+	}
+
+	h2 {
+		font-family: $secondary-font;
+		margin-top: 0;
+		margin-bottom: 0;
+		
+		@media (max-width:$phone) {
+    		display: none;
+    	}
+	}
+
+	hr.separator {
+		margin-top: 5em;
+		margin-bottom: 5em;
+
+		@media (max-width:$phone) {
+    		margin-top: 2em;
+			margin-bottom: 2em;
+    	}
+	}
+}
+
+.archive-template {
+	.header_winchester{
+		h1,h2,hr.separator {
+			display: none;
+		}
+	}
+}
+
+// 4. Content
+article {
+	margin-top: 30px;
+}
+
+.home-template, .archive-template {
+
+	h1.posttitle_winchester {
+		margin-top: .25em;
+		margin-bottom: .35em;
+
+		a {
+		color: $heading-color;
+		border: none;
+		}
+	}
+
+	h3 {
+		text-transform: uppercase;
+		text-align: center;
+		letter-spacing: 1px;
+	}
+
+	h4 {
+		margin-top: 0;
+
+		a:link, a:visited {
+			color: $heading-color;
+			border: none;
+		}
+
+		a:active, a:hover {
+			color: $link-color;
+		}
+	}
+
+}
+
+.post-template {
+
+	.header_winchester {
+		img {
+			max-width: 50px;
+			margin: 0;
+		}
+
+		h1 {
+			font-size: 2em;
+			letter-spacing: 1px;
+			margin-top: .15em;
+			margin-bottom: .15em;
+		}
+		
+		hr.separator {
+			margin-top: 2em;
+			margin-bottom: 2em;
+		}
+	}
+
+	h1,h2,h3,h4,h5,h6 {
+	text-align: center;
+
+	}
+	
+	article {
+		
+		.meta_winchester {
+			text-align: center;
+		}
+		
+		img {
+			display: block;
+			margin: 2em auto;
+		}
+		
+		.caption {
+			font-style: $font-style-italic;
+			font-size: 0.9em;
+			line-height: 1.2em;
+			margin-bottom: 2em;
+			display: block;
+			text-indent: 0;
+		}
+		
+		hr {
+			margin-top: 1em;
+			margin-bottom: 1em;
+		}
+	}
+}
+
+.meta_winchester {
+
+	font-size: 0.8em;
+	
+	.date_winchester {
+		font-family: $secondary-font;
+		letter-spacing: 1px;
+		margin-bottom: none;
+	}
+	
+	.posttags_winchester {
+		font-style: $font-style-italic;
+	}
+}
+
+.post-template blockquote p:first-of-type:first-line {
+    font-family: $body-font;
+}
+
+.sharepost_winchester {
+	text-align: center;
+	padding-top: 3em;
+	padding-bottom: 3em;
+
+	h2 {
+		font-family: $secondary-font;
+		font-size: 1.75em;
+		letter-spacing: 1px;
+		margin-bottom: .5em;
+		
+		@media (max-width:$phone) {
+			font-size: 1.5em;
+		}
+		
+	}
+
+	a.share_winchester {
+		border-bottom: none;
+	}
+
+	hr.separator {
+		margin-top: 4em;
+		margin-bottom: 4em;
+	}
+}
+
+.contentslink_winchester {
+	text-align: center;
+	font-style: $font-style-italic;
+}
+
+.postfooter_winchester {
+
+	h2 {
+		font-family: $secondary-font;
+		font-size: 1.75em;
+		letter-spacing: 1px;
+		margin-top: 3em;
+		
+		@media (max-width:$phone) {
+			font-size: 1.5em;
+		}
+	}
+	
+	h3 {
+		margin-top: .5em;
+	}
+	
+	p {
+		font-style: $font-style-italic;
+	}
+	
+
+	hr.separator {
+		margin-top: 4em;
+		margin-bottom: 4em;
+	}
+
+	.authorimage_winchester {
+		text-align: center;
+
+		img {
+			max-width: 100px;
+			margin-top: 1em;
+			margin-bottom: 0;
+		}
+	}
+
+	.authorname_winchester {
+		text-align: center;
+		font-family: $secondary-font;
+		font-style: normal;
+		letter-spacing: 1px;
+	}
+	
+	.authorwebsite_winchester, .authoremail_winchester {
+		margin-top: .5em;
+	}
+}
+
+.pagination_winchester {
+	position: relative;
+    width: 100%;
+    max-width: 550px;
+    margin: 3em auto;
+	text-align: center;
+	font-family: $secondary-font;
+
+	a:link, a:visited {
+		border-bottom: none;
+	}
+
+	.older-posts, .newer-posts {
+		position: absolute;
+    	display: inline-block;
+	}
+
+	.older-posts {
+		right: 0;
+	}
+
+	.newer-posts {
+		left: 0;
+	}
+
+	.page-number {
+		font-style: $font-style-italic;
+	}
+
+	@media (max-width:$phone) {
+	    .older-posts, .newer-posts, .page-number {
+	    	position: relative;
+	    	display: block;
+	    	padding: 10px 0;
+	    }
+	}
+}
+
+// 5. Footer
+.footer_winchester {
+	text-align: center;
+	font-family: $secondary-font;
+	margin-bottom: 3em;
+
+	.footertext_winchester {
+		margin-top: 3em;
+	}
+
+	hr.separator {
+		margin-top: 5em;
+		margin-bottom: 5em;
+	}
+}
+
+// 6. Print Styles
+@media print {
+
+	body {
+	  font-size: 11pt;
+	}
+	
+	.home-template .header_winchester, .archive-template .header_winchester {
+		page-break-after: always;
+	}
+	
+	h1,h2,h3,h4,h5,h6 {
+		page-break-after: avoid;
+	}
+	
+	p {
+		orphans: 3;
+		widows: 3;
+	}
+	
+	a:link, a:visited {
+		color: $body-color;
+		border-bottom: none;
+	}
+	
+	.sharepost_winchester, .subscribe_winchester {
+		display: none;
+	}
+	
+	.authorwebsite_winchester a {
+		text-decoration: underline;
+	}
+	
+	pre {
+		page-break-inside: avoid;
+	}
+	
+	.postfooter_winchester {
+		page-break-inside: avoid;
+	}
+
+}

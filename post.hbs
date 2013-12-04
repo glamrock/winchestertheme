@@ -1,0 +1,112 @@
+{{!< default-post}}
+
+<main class="main_winchester" role="main">
+	
+	{{#post}}
+	
+		<article class="article_winchester" role="article" itemscope itemtype="http://schema.org/Article">
+
+			<header class="postheader_winchester">
+
+				<div class="meta_winchester">
+
+					<time class="date_winchester" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
+						{{date format='MMMM D, YYYY'}}
+					</time>
+					
+					<div class="posttags_winchester">
+					on {{tags separator=", "}}
+					</div>
+
+				</div>
+
+				<h1 class="posttitle_winchester" itemprop="headline">{{title}}</h1>
+
+			</header>
+		
+			<div class="postcontent_winchester" itemprop="articleBody">
+			
+				{{content}}
+			
+			</div>
+
+		    <div class="sharepost_winchester">
+		    
+		    	<h2>Share this Post</h2>
+		    
+		    	<a class="share_winchester" target="_blank" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"><i class="icon-twitter-squared"></i></a>
+		    
+		    	<a class="share_winchester" target="_blank" href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}"><i class="icon-facebook-squared"></i></a>
+		    
+		    	<a class="share_winchester" target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}"><i class="icon-gplus-squared"></i></a>
+		    
+		    </div>
+			
+			<div class="contentslink_winchester">
+			
+				<a href="/#contents">&larr; Back to Contents</a>
+			
+			</div>
+		    
+		    {{> comments}}
+
+	        {{#if author}}
+	        
+		        <footer class="postfooter_winchester">
+
+		        	<hr class="separator">
+					
+						<h2>About the Author</h2>
+
+		        			{{#if author.image}}
+
+		        					<div class="authorimage_winchester"><img src="{{author.image}}" itemprop="image" /></div>
+
+		        			{{/if}}
+
+				        		<address itemscope itemtype="http://schema.org/Person">
+
+			        				<h3 class="authorname_winchester"><span itemprop="author">{{author.name}}</span></h3>
+
+								</address>
+
+								<div class="authorbio_winchester">
+		        	
+					        		<p>{{author.bio}}</p>
+					        
+					        	</div>
+
+					        	{{#if author.website}}
+					        
+				        			<address>
+					        			<div class="authorwebsite_winchester"><a href="{{author.website}}" itemprop="url">{{author.website}}</a></div>
+				        			</address>
+				        
+								{{/if}}
+								
+								{{#if author.email}}
+								
+									<address>
+										<div class="authoremail_winchester">
+										<a href="mailto:{{author.email}}" target="_blank" >{{author.email}}</a>
+									</address>
+								
+								{{/if}}
+	        
+	        	</footer>
+	        
+	        {{/if}}
+		
+		</article>
+	
+	{{/post}}
+	
+	{{#if pagination}}
+	
+		<div class="pagination_winchester">
+			{{{pagination}}}
+		</div>
+	
+	{{/if}}
+
+</main>
