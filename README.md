@@ -4,7 +4,7 @@ Winchester is a refined, tasteful, theme for the [Ghost](http://github.com/trygh
 
 As Ghost evolves, so too will Winchester.
 
-[Winchester Demo](https://github.com/philyerger/winchestertheme)
+[Winchester Demo](http://ghost.winchestertheme.bitnamiapp.com/)
 
 [Download Winchester](https://github.com/philyerger/winchestertheme/archive/master.zip)
 
